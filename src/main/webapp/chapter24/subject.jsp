@@ -9,7 +9,7 @@
 <table style="border-collapse:separate;border-spacing:10px;">
 
 <hr style="height: 6px;">
-<!-- TODO: 受け取った学生の一覧情報を表示 -->
+<!-- TODO: 受け取った科目の一覧情報を表示 -->
 <table border="1">
 <th>学校コード</th>
 <th>科目コード</th>
