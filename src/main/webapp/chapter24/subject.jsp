@@ -1,27 +1,29 @@
-package chapter24;
+<%@page contentType="text/html; charset=UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@include file="../header.html" %>
+<%@include file="menu.jsp" %>
 
-import java.util.List;
+<%@page import="bean.Student,java.util.List" %>
 
-import bean.Student;
-import dao.StudentDAO;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
-import tool.Action;
 
-public class SubjectListAction extends Action {
-	public String execute(
-		HttpServletRequest request, HttpServletResponse response
-	) throws Exception {
+<table style="border-collapse:separate;border-spacing:10px;">
 
-		HttpSession session=request.getSession(); // セッションの開始
+<hr style="height: 6px;">
+<!-- TODO: 受け取った学生の一覧情報を表示 -->
+<table border="1">
+<th>学校コード</th>
+<th>科目コード</th>
+<th>科目名</th>
+<c:forEach var="subject" items="${list}">
+	<tr>
+	<td>${school.id}</td>
+	<td>${subject.id}</td>
+	<td>${subject.name}</td>
+	</tr>
+</c:forEach>
+</table>		
+</table>
+<hr style="border-collapse:separate;border-spacing:10px;">
 
-		StudentDAO dao=new StudentDAO();
-		List<Subject> list=dao.search(""); // 科目一覧を取得 
+<%@include file="../footer.html" %>
 
-		session.setAttribute("list", list); // 科目一覧をlistという名前で保存
-
-		return "subjectList.jsp"; // subjectList.jspに遷移
-
-	}
-}
