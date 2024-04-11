@@ -1,4 +1,4 @@
-package chapter25;
+package chapter24;
 
 import java.util.List;
 
@@ -17,11 +17,11 @@ public class SubjectListAction extends Action {
 		HttpSession session=request.getSession(); // セッションの開始
 
 		StudentDAO dao=new StudentDAO();
-		List<Student> list=dao.search(""); // 学生一覧を取得 
+		List<Subject> list=dao.search(""); // 科目一覧を取得 
 
-		session.setAttribute("list", list); // 学生一覧をlistという名前で保存
+		session.setAttribute("list", list); // 科目一覧をlistという名前で保存
 
-		return "studentList.jsp"; // studentList.jspに遷移
+		return "subjectList.jsp"; // subjectList.jspに遷移
 
 	}
 }
