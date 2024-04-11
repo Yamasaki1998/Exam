@@ -2,6 +2,6 @@
 <%@include file="../header.html" %>
 <%@include file="/kanri/menu.jsp" %>
 
-こんにちは、${}さん。
+こんにちは、${id}さん。
 
 <%@include file="../footer.html" %>
