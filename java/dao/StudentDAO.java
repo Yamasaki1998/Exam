@@ -6,12 +6,12 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import bean.Product;
+import bean.Student;
 
 public class StudentDAO extends DAO { // DAOクラスを継承(DAOクラスのメソッドが使えるようになる)
 
 	public List<Student> search(String keyword) throws Exception { // searchメソッドを定義
-		List<Student> list=new ArrayList<>(); // Product型の配列を作成
+		List<Student> list=new ArrayList<>(); // Student型の配列を作成
 
 		Connection con=getConnection(); // DBに接続(DAOのgetConnectionメソッドを実行)
 
