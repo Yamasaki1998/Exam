@@ -24,7 +24,7 @@ public class StudentDAO extends DAO { // DAOクラスを継承(DAOクラスの�
 		// データを順に取得
 		while (rs.next()) {
 			Student p=new Student();
-			p.setId(rs.getString("id"));
+			p.setNo(rs.getString("no"));
 			p.setName(rs.getString("name"));
 			p.setEnt_year(rs.getInt("ent_year"));
 			list.add(p); // データを一件取得するごとにlistに追記する
