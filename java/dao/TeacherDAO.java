@@ -1,9 +1,10 @@
 package dao;
 
-import bean.Teacher;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
+import bean.Teacher;
 
 public class TeacherDAO extends DAO {
 	public Teacher search(String login, String password)
@@ -21,7 +22,7 @@ public class TeacherDAO extends DAO {
 
 		while (rs.next()) {
 			teacher=new Teacher();
-			teacher.setId(rs.getInt("id"));
+			teacher.setNo(rs.getString("no"));
 			teacher.setLogin(rs.getString("login"));
 			teacher.setPassword(rs.getString("password"));
 		}
