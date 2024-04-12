@@ -1,11 +1,11 @@
 package dao;
 
-import bean.Customer;
+import bean.Teacher;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class CustomerDAO extends DAO {
+public class TeacherDAO extends DAO {
 	public Teacher search(String login, String password)
 		throws Exception {
 		Teacher teacher=null;
@@ -14,7 +14,7 @@ public class CustomerDAO extends DAO {
 
 		PreparedStatement st;
 		st=con.prepareStatement(
-			"select * from customer where login=? and password=?");
+			"select * from teacher where login=? and password=?");
 		st.setString(1, login);
 		st.setString(2, password);
 		ResultSet rs=st.executeQuery();
