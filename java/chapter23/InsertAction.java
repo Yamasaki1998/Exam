@@ -18,7 +18,7 @@ public class InsertAction extends Action {
 
 		Student p=new Student();
 		p.setName(name);
-		p.setEnt_year(ent_yeay);
+		p.setEnt_year(ent_year);
 		StudentDAO dao=new StudentDAO();
 		dao.insert(p);
 
