@@ -13,8 +13,8 @@ public class InsertAction extends Action {
 		HttpServletRequest request, HttpServletResponse response
 	) throws Exception {
 
-		String Name=request.getParameter("Name");
-		Integer Ent_Year=Integer.parseInt(request.getParameter("Ent_Year"));
+		String name=request.getParameter("Name");
+		Integer ent_year=Integer.parseInt(request.getParameter("Ent_year"));
 
 		Student p=new Student();
 		p.setName(name);
@@ -22,7 +22,7 @@ public class InsertAction extends Action {
 		StudentDAO dao=new StudentDAO();
 		dao.insert(p);
 
-		List<Product> list=dao.search("");
+		List<Student> list=dao.search("");
 		request.setAttribute("list", list);
 
 		return "list.jsp";
