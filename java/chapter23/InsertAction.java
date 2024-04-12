@@ -2,8 +2,8 @@ package chapter23;
 
 import java.util.List;
 
-import bean.Product;
-import dao.ProductDAO;
+import bean.Student;
+import dao.StudentDAO;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import tool.Action;
@@ -18,8 +18,8 @@ public class InsertAction extends Action {
 
 		Student p=new Student();
 		p.setName(name);
-		p.setPrice(price);
-		ProductDAO dao=new ProductDAO();
+		p.setEnt_year(ent_yeay);
+		StudentDAO dao=new StudentDAO();
 		dao.insert(p);
 
 		List<Product> list=dao.search("");
