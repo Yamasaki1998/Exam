@@ -1,7 +1,7 @@
 
 package bean;
 
-public class Customer implements java.io.Serializable {
+public class Teacher implements java.io.Serializable {
 
 	private int id;
 	private String login;
