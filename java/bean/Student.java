@@ -2,28 +2,27 @@ package bean;
 
 public class Student implements java.io.Serializable {
 
-	private String NO;
-	private String NAME;
-	private int ENT_YEAR;
+	private String no;
+	private String name;
+	private int ent_year;
 
-	public String getNO() {
-		return NO;
+	public String getN() {
+		return no;
 	}
-	public String getNAME() {
-		return NAME;
+	public String getName() {
+		return name;
 	}
-	public int getENT_YEAR() {
-		return ENT_YEAR;
+	public int getEnt_year() {
+		return ent_year;
 	}
 
-	public void setNO(int NO) {
-		this.NO=NO;
+	public void setNo(String no) {
+		this.no=no;
 	}
-	public void setNAME(String NAME) {
-		this.NAME=NAME;
+	public void setName(String name) {
+		this.name=name;
 	}
-	public void setENT_YEAR(int ENT_YEAR) {
-		this.ENT_YEAR=ENT_YEAR;
+	public void setEnt_year(int ent_year) {
+		this.ent_year=ent_year;
 	}
 }
-
