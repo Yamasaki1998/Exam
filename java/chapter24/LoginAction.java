@@ -14,10 +14,11 @@ public class LoginAction extends Action {
 		
 		HttpSession session=request.getSession();
 		
-		String login=request.getParameter("login");
 		String password=request.getParameter("password");
+		String name=request.getParameter("name");
+		
 		TeacherDAO dao=new TeacherDAO();
-		Teacher teacher=dao.search(login,password);
+		Teacher teacher=dao.search(password,name);
 		
 		if (teacher!=null) {
 			session.setAttribute("teacher", teacher);
