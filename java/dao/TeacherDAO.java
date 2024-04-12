@@ -20,10 +20,10 @@ public class TeacherDAO extends DAO {
 		ResultSet rs=st.executeQuery();
 
 		while (rs.next()) {
-			customer=new Customer();
-			customer.setId(rs.getInt("id"));
-			customer.setLogin(rs.getString("login"));
-			customer.setPassword(rs.getString("password"));
+			teacher=new Teacher();
+			teacher.setId(rs.getInt("id"));
+			teacher.setLogin(rs.getString("login"));
+			teacher.setPassword(rs.getString("password"));
 		}
 
 		st.close();
