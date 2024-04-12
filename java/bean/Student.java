@@ -1,6 +1,6 @@
 package bean;
 
-public class Product implements java.io.Serializable {
+public class Student implements java.io.Serializable {
 
 	private String NO;
 	private String NAME;
