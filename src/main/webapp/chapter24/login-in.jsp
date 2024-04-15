@@ -1,11 +1,9 @@
 <%@page contentType="text/html; charset=UTF-8" %>
-<%@include file="../header.html" %>
-<%@include file="../chapter25/menu.jsp" %>
 
 <form action="Login.action" method="post">
-<p>ログイン名<input type="text" name="login"></p>
-<p>パスワード<input type="password" name="password"></p>
-<p><input type="submit" value="ログイン"></p>
+<input name="password" type="text" value="" placeholder="passwordを入力してね" />
+<input name="name" type="text" value="" placeholder="名前を入力してね" />
+<input type="submit" value="ログインする" />
 </form>
-
+  
 <%@include file="../footer.html" %>
