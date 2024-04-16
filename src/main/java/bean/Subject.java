@@ -1,11 +1,12 @@
 package bean;
 
-public class Student implements java.io.Serializable {
+public class Subject implements java.io.Serializable {
 
 	private String school_cd;
 	private String cd;
 	private String name;
 
+	
 	public String getSchool_Cd() {
 		return school_cd;
 	}
