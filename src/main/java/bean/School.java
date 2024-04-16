@@ -12,7 +12,7 @@ public class School implements java.io.Serializable {
 		return name;
 	}
 
-	public void setNo(String cd) {
+	public void setCd(String cd) {
 		this.cd=cd;
 	}
 	public void setName(String name) {
