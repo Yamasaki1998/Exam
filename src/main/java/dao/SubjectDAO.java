@@ -11,7 +11,7 @@ import bean.Subject;
 public class SubjectDAO extends DAO { // DAOクラスを継承(DAOクラスのメソッドが使えるようになる)
 
 	public List<Subject> search(String keyword) throws Exception { // searchメソッドを定義
-		List<Subject> list=new ArrayList<>(); // Student型の配列を作成
+		List<Subject> list=new ArrayList<>(); // 配列を作成
 
 		Connection con=getConnection(); // DBに接続(DAOのgetConnectionメソッドを実行)
 
