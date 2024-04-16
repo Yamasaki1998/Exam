@@ -4,12 +4,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import bean.Class_num;
+import bean.Class;
 
-public class Class_numDAO extends DAO {
-	public Class_num search(String school_cd, String class_num)
+public class ClassDAO extends DAO {
+	public Class search(String school_cd, String class_num)
 		throws Exception {
-		Class_num class_num=null;
+		Class class=null;
 
 		Connection con=getConnection();
 
@@ -21,13 +21,13 @@ public class Class_numDAO extends DAO {
 		ResultSet rs=st.executeQuery();
 
 		while (rs.next()) {
-			class_num=new Class_num();
-			class_num.setSchool_cd(rs.getString("school_cd"));
-			class_num.setClass_num(rs.getString("class_num"));
+			class=new Class();
+			class.setSchool_cd(rs.getString("school_cd"));
+			class.setClass_num(rs.getString("class_num"));
 		}
 
 		st.close();
 		con.close();
-		return class_num;
+		return class;
 	}
 }
