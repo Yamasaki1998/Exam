@@ -1,6 +1,6 @@
 package bean;
 
-public class Class_num implements java.io.Serializable {
+public class Class implements java.io.Serializable {
 
 	private String school_cd;
 	private String class_num;
