@@ -6,7 +6,7 @@ public class Student implements java.io.Serializable {
 	private String name;
 	private int ent_year;
 
-	public String getN() {
+	public String getNo() {
 		return no;
 	}
 	public String getName() {
