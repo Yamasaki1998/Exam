@@ -27,7 +27,7 @@ public class All extends HttpServlet {
 		try { 
 			InitialContext ic=new InitialContext();
 			DataSource ds=(DataSource)ic.lookup(
-				"java:/comp/env/jdbc/book");
+				"java:/comp/env/jdbc/seiseki");
 			Connection con=ds.getConnection(); // DBに接続
 
 			PreparedStatement st=con.prepareStatement(
