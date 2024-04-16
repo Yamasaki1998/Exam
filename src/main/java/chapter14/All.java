@@ -31,7 +31,7 @@ public class All extends HttpServlet {
 			Connection con=ds.getConnection(); // DBに接続
 
 			PreparedStatement st=con.prepareStatement(
-			"select * from product"); // sqlの準備
+			"select * from student"); // sqlの準備
 			ResultSet rs=st.executeQuery(); // sqlの実行結果を取得
 			
 			/* rsの中身はこんな感じ
