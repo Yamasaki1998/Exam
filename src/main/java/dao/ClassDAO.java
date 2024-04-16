@@ -9,7 +9,7 @@ import bean.Class;
 public class ClassDAO extends DAO {
 	public Class search(String school_cd, String class_num)
 		throws Exception {
-		Class class=null;
+		Class classInstance=null;
 
 		Connection con=getConnection();
 
@@ -21,13 +21,13 @@ public class ClassDAO extends DAO {
 		ResultSet rs=st.executeQuery();
 
 		while (rs.next()) {
-			class=new Class();
-			class.setSchool_cd(rs.getString("school_cd"));
-			class.setClass_num(rs.getString("class_num"));
+			classInstance=new Class();
+			classInstance.setSchool_cd(rs.getString("school_cd"));
+			classInstance.setClass_num(rs.getString("class_num"));
 		}
 
 		st.close();
 		con.close();
-		return class;
+		return classInstance;
 	}
 }
