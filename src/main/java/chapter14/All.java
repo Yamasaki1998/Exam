@@ -1,21 +1,3 @@
-/* 目標
- * 	DB接続方法を理解する
- * DBの接続
- * 	書式
- * 		InitialContext ic=new InitialContext();
-		DataSource ds=(DataSource)ic.lookup("java:/comp/env/接続設定名");
-		Connection con=ds.getConnection();
-	例
-		InitialContext ic=new InitialContext();
-		DataSource ds=(DataSource)ic.lookup("java:/comp/env/jdbc/book");
-		Connection con=ds.getConnection();
-		jdbc/bookという名前で定義されたDBに接続
- * SQLの実行
- * 	書式
- * 		PreparedStatement st=con.prepareStatement("SQL文");
-		ResultSet rs=st.executeQuery();
-*/
-
 package chapter14;
 
 import java.io.IOException;
@@ -66,11 +48,11 @@ public class All extends HttpServlet {
 
 			// sqlの実行結果を順に取得して表示
 			while (rs.next()) {  // rsの次の要素が存在する限り処理を繰り返す
-				out.println(rs.getInt("id")); // id列の値をint型で取得して表示
+				out.println(rs.getInt("no")); // id列の値をint型で取得して表示
 				out.println("：");
 				out.println(rs.getString("name")); // name列の値をstring型で取得して表示
 				out.println("：");
-				out.println(rs.getInt("price")); // priceの値をint型で取得して表示
+				out.println(rs.getInt("ent_year")); // priceの値をint型で取得して表示
 				out.println("<br>");
 			}
 
