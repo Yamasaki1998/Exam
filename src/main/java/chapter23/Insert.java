@@ -1,4 +1,4 @@
-package gakuseikanri;
+package chapter23;
 
 import java.io.IOException;
 import java.io.PrintWriter;
