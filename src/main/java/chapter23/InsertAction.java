@@ -13,12 +13,16 @@ public class InsertAction extends Action {
 		HttpServletRequest request, HttpServletResponse response
 	) throws Exception {
 
+		String no=request.getParameter("No");
 		String name=request.getParameter("Name");
 		Integer ent_year=Integer.parseInt(request.getParameter("Ent_year"));
+		String class_num=request.getParameter("Class_num");
 
 		Student p=new Student();
+		p.setNo(no);
 		p.setName(name);
 		p.setEnt_year(ent_year);
+		p.setClass_num(class_num);
 		StudentDAO dao=new StudentDAO();
 		dao.insert(p);
 
