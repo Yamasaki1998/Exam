@@ -6,7 +6,7 @@ public class Student implements java.io.Serializable {
 	private String name;
 	private int ent_year;
 	private String classnum;
-	private boolean isattend;
+	private Boolean isattend;
 	private String school;
 
 	public String getNo() {
@@ -21,7 +21,7 @@ public class Student implements java.io.Serializable {
 	public String getClassnum() {
 		return classnum;
 	}
-	public boolean getIsattend() {
+	public Boolean getIsattend() {
 		return isattend;
 	}
 	public String getSchool() {
@@ -40,7 +40,7 @@ public class Student implements java.io.Serializable {
 	public void setClassnum(String classnum) {
 		this.classnum=classnum;
 	}
-	public void setIsattend(boolean isattend) {
+	public void setIsattend(Boolean isattend) {
 		this.isattend=isattend;
 	}
 	public void setSchool(String school) {
