@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import tool.Page;
 
 @WebServlet(urlPatterns={"/gakuseikanri/insert"})
-public class SubjectInsert extends HttpServlet {
+public class SubjectInsertAction extends HttpServlet {
 
 	public void doPost (
 		HttpServletRequest request, HttpServletResponse response
