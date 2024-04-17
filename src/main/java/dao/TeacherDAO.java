@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import bean.Teacher;
 
 public class TeacherDAO extends DAO {
-	public Teacher search(String password, String name)
+	public Teacher search(String id, String password)
 		throws Exception {
 		Teacher teacher=null;
 
@@ -15,16 +15,16 @@ public class TeacherDAO extends DAO {
 
 		PreparedStatement st;
 		st=con.prepareStatement(
-			"select * from teacher where password=? and name=?");
-		st.setString(1, password);
-		st.setString(2, name);
+			"select * from teacher where id=? and password=?");
+		st.setString(1, id);
+		st.setString(2, password);
 		ResultSet rs=st.executeQuery();
 
 		while (rs.next()) {
 			teacher=new Teacher();
 			teacher.setId(rs.getString("id"));
+			teacher.setId(rs.getString("id"));
 			teacher.setPassword(rs.getString("password"));
-			teacher.setName(rs.getString("name"));
 		}
 
 		st.close();
