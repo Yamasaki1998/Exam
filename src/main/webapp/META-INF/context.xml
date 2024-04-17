@@ -1,6 +1,6 @@
 <Context reloadeble="true">
   <Resource
-    name="jdbc/book"
+    name="jdbc/Seiseki"
     auth="Container"
     type="jvax.sql.DataSource"
     driverClassName="org.h2.Driver"
