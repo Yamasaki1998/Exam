@@ -19,4 +19,7 @@
 </form>
 
 <hr style="border-collapse:separate;border-spacing:10px;">
+
+<br><a href="../chapter25/menu.jsp">メニューに戻る</a>
+
 <%@include file="../footer.html" %>

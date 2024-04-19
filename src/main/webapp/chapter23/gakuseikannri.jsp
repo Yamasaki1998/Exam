@@ -7,4 +7,6 @@
 <a href="../chapter23/insert.jsp">学生の追加</a>
 <a href="../chapter23/search.jsp">検索</a>
 
+<br><br><a href="../chapter25/menu.jsp">メニューに戻る</a>
+
 <%@include file="../footer.html" %>

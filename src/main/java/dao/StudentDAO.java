@@ -23,14 +23,14 @@ public class StudentDAO extends DAO { // DAOクラスを継承(DAOクラスの�
 
 		// データを順に取得
 		while (rs.next()) {
-			Student p=new Student();
-			p.setNo(rs.getString("no"));
-			p.setName(rs.getString("name"));
-			p.setEnt_year(rs.getInt("ent_year"));
-			p.setClass_num(rs.getString("class_num"));
-			p.setIsattend(rs.getBoolean("isattend"));
-			p.setSchool(rs.getString("school"));
-			list.add(p); // データを一件取得するごとにlistに追記する
+			Student s=new Student();
+			s.setNo(rs.getString("no"));
+			s.setName(rs.getString("name"));
+			s.setEnt_year(rs.getString("ent_year"));
+			s.setClass_num(rs.getString("class_num"));
+			s.setIsattend(rs.getBoolean("isattend"));
+			s.setSchool(rs.getString("school"));
+			list.add(s); // データを一件取得するごとにlistに追記する
 			
 		}
 
@@ -45,8 +45,12 @@ public class StudentDAO extends DAO { // DAOクラスを継承(DAOクラスの�
 
 		PreparedStatement st=con.prepareStatement(
 			"insert into student values(null, ?, ?)");
+		st.setString(0, student.getNo());
 		st.setString(1, student.getName());
-		st.setInt(2, student.getEnt_year());
+		st.setString(2, student.getEnt_year());
+		st.setString(3, student.getClass_num());
+		st.setBoolean(4, student.getIsattend());
+		st.setString(5,student.getSchool());
 		int line=st.executeUpdate();
 
 		st.close();

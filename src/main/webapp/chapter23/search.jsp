@@ -7,4 +7,6 @@
 <input type="submit" value="検索">
 </form>
 
+<br><a href="../chapter25/menu.jsp">メニューに戻る</a>
+
 <%@include file="../footer.html" %>
