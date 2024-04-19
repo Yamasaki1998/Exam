@@ -5,7 +5,7 @@
 <!-- menu.jspを読み込む -->
 <%@include file="../chapter25/menu.jsp" %>
 
-<p>追加する生徒の情報を入力してください。</p>
+<p>登録する生徒の情報を入力してください。</p>
 <form action="insert" method="post">
 学生番号<input type="text" name="no"><br>
 <br>
