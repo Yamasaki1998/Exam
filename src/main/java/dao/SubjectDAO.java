@@ -42,9 +42,10 @@ public class SubjectDAO extends DAO { // DAOクラスを継承(DAOクラスの�
 		Connection con=getConnection();
 
 		PreparedStatement st=con.prepareStatement(
-			"insert into subject values(null, ?, ?)");
-		st.setString(1, subject.getCd());
-		st.setString(2, subject.getName());
+			"insert into subject values(?, ?, ?)");
+		st.setString(1, subject.getSchool_Cd());
+		st.setString(2, subject.getCd());
+		st.setString(3, subject.getName());
 		int line=st.executeUpdate();
 
 		st.close();

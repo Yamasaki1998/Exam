@@ -1,3 +1,4 @@
+
 package dao;
 
 import java.sql.Connection;
@@ -29,7 +30,7 @@ public class StudentDAO extends DAO { // DAOクラスを継承(DAOクラスの�
 			s.setEnt_year(rs.getString("ent_year"));
 			s.setClass_num(rs.getString("class_num"));
 			s.setIsattend(rs.getBoolean("isattend"));
-			s.setSchool(rs.getString("school"));
+			s.setSchool_cd(rs.getString("school_cd"));
 			list.add(s); // データを一件取得するごとにlistに追記する
 			
 		}
@@ -44,13 +45,13 @@ public class StudentDAO extends DAO { // DAOクラスを継承(DAOクラスの�
 		Connection con=getConnection();
 
 		PreparedStatement st=con.prepareStatement(
-			"insert into student values(null, ?, ?)");
-		st.setString(0, student.getNo());
-		st.setString(1, student.getName());
-		st.setString(2, student.getEnt_year());
-		st.setString(3, student.getClass_num());
-		st.setBoolean(4, student.getIsattend());
-		st.setString(5,student.getSchool());
+			"insert into student values(?,?,?,?,?,?)");
+		st.setString(1, student.getNo());
+		st.setString(2, student.getName());
+		st.setString(3, student.getEnt_year());
+		st.setString(4, student.getClass_num());
+		st.setBoolean(5, student.getIsattend());
+		st.setString(6,student.getSchool_cd());
 		int line=st.executeUpdate();
 
 		st.close();

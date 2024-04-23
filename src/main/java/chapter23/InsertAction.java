@@ -1,3 +1,4 @@
+
 package chapter23;
 
 import java.util.List;
@@ -15,14 +16,17 @@ public class InsertAction extends Action {
 
 		String no=request.getParameter("No");
 		String name=request.getParameter("Name");
-		Integer ent_year=Integer.parseInt(request.getParameter("Ent_year"));
+		String ent_year=request.getParameter("Ent_year");
 		String class_num=request.getParameter("Class_num");
-
+		Boolean isattend=Boolean.valueOf(request.getParameter("isattend"));
+		String school_cd=request.getParameter("School_cd");
 		Student p=new Student();
 		p.setNo(no);
 		p.setName(name);
 		p.setEnt_year(ent_year);
 		p.setClass_num(class_num);
+		p.setIsattend(isattend);
+		p.setSchool_cd(school_cd);
 		StudentDAO dao=new StudentDAO();
 		dao.insert(p);
 
@@ -32,5 +36,3 @@ public class InsertAction extends Action {
 		return "list.jsp";
 	}
 }
-
-

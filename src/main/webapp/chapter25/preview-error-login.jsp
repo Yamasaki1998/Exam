@@ -2,8 +2,8 @@
 <%@include file="../header.html" %>
 <%@include file="menu.jsp" %>
 
-学生管理を見るには
+これらの機能を利用するためには、
 <a href="../chapter24/login-in.jsp">ログイン</a>
-してください。
+する必要があります。
 
 <%@include file="../footer.html" %>

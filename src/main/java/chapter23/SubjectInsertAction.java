@@ -1,44 +1,33 @@
+
 package chapter23;
 
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.List;
 
 import bean.Subject;
 import dao.SubjectDAO;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import tool.Page;
+import tool.Action;
 
-@WebServlet(urlPatterns={"/chapter23/insert"})
-public class SubjectInsertAction extends HttpServlet {
-
-	public void doPost (
+public class SubjectInsertAction extends Action {
+	public String execute(
 		HttpServletRequest request, HttpServletResponse response
-	) throws ServletException, IOException {
-		PrintWriter out=response.getWriter();
-		Page.header(out);
-		try {
-			String school_cd=request.getParameter("school_cd");
-			String cd=request.getParameter("cd");
-			String name=request.getParameter("name");
+	) throws Exception {
 
-			Subject s=new Subject();
-			s.setSchool_Cd(school_cd);
-			s.setCd(cd);
-			s.setName(name);
+		String school_cd=request.getParameter("school_cd");
+		String cd=request.getParameter("cd");
+		String name=request.getParameter("name");
 
-			SubjectDAO dao=new SubjectDAO();
-			int line=dao.insert(s);
+		Subject s=new Subject();
+		s.setSchool_Cd(school_cd);
+		s.setCd(cd);
+		s.setName(name);
+		SubjectDAO dao=new SubjectDAO();
+		dao.insert(s);
 
-			if (line>0) {
-				out.println("追加に成功しました。");
-			}
-		} catch (Exception e) {
-			e.printStackTrace(out);
-		}
-		Page.footer(out);
+		List<Subject> list=dao.search("");
+		request.setAttribute("list", list);
+
+		return "subjectlist.jsp";
 	}
 }

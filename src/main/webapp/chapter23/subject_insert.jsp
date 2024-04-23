@@ -6,8 +6,10 @@
 <%@include file="../chapter25/menu.jsp" %>
 
 <p>追加する科目の情報を入力してください。</p>
-<form action="SubjectInsert.action" method="post">
-学校コード<input type="text" name="shool_cd"><br>
+<form action="SubjectInsert.action" method="post"> 学校名
+<select name="school_cd" required>
+<option value="oom">大宮</option>
+<option value="tky">東京</option></select><br>
 <br>
 科目コード<input type="text" name="cd"><br>
 <br>

@@ -1,6 +1,3 @@
-
-
-
 package chapter24;
 
 import java.util.List;

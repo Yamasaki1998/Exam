@@ -16,12 +16,12 @@ public class SubjectListAction extends Action {
 
 		HttpSession session=request.getSession(); // セッションの開始
 
-		StudentDAO dao=new SubjectDAO();
+		SubjectDAO dao=new SubjectDAO();
 		List<Subject> list=dao.search(""); // 科目一覧を取得 
 
 		session.setAttribute("list", list); // 科目一覧をlistという名前で保存
 
-		return "subjectList.jsp"; // subjectList.jspに遷移
+		return "subjectlist.jsp"; // subjectList.jspに遷移
 
 	}
 }
