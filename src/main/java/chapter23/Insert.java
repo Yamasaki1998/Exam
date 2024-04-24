@@ -42,10 +42,10 @@ public class Insert extends HttpServlet {
 				out.println("追加に成功しました。<br><br><a href=\"../chapter25/menu.jsp\">メニューに戻る</a> <a href=\"../chapter23/insert.jsp\">学生の追加</a>\n"
 						+ "");
 			} else {
-				response.sendRedirect("chapter24/insert-error.jsp");
+				response.sendRedirect("../chapter24/insert-error.jsp");
 			}
 		} catch (Exception e) {
-			e.printStackTrace(out);
+			response.sendRedirect("../chapter24/insert-error.jsp");
 		}
 		Page.footer(out);
 	}

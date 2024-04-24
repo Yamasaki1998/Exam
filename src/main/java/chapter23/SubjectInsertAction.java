@@ -19,7 +19,7 @@ public class SubjectInsertAction extends Action {
 		String name=request.getParameter("name");
 
 		Subject s=new Subject();
-		s.setSchool_Cd(school_cd);
+		s.setSchool_cd(school_cd);
 		s.setCd(cd);
 		s.setName(name);
 		SubjectDAO dao=new SubjectDAO();

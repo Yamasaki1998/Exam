@@ -24,7 +24,7 @@ public class SubjectDAO extends DAO { // DAOクラスを継承(DAOクラスの�
 		// データを順に取得
 		while (rs.next()) {
 			Subject p=new Subject();
-			p.setSchool_Cd(rs.getString("school_cd"));
+			p.setSchool_cd(rs.getString("school_cd"));
 			p.setCd(rs.getString("cd"));
 			p.setName(rs.getString("name"));
 			list.add(p); // データを一件取得するごとにlistに追記する
@@ -43,7 +43,7 @@ public class SubjectDAO extends DAO { // DAOクラスを継承(DAOクラスの�
 
 		PreparedStatement st=con.prepareStatement(
 			"insert into subject values(?, ?, ?)");
-		st.setString(1, subject.getSchool_Cd());
+		st.setString(1, subject.getSchool_cd());
 		st.setString(2, subject.getCd());
 		st.setString(3, subject.getName());
 		int line=st.executeUpdate();

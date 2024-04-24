@@ -7,7 +7,7 @@ public class Subject implements java.io.Serializable {
 	private String name;
 
 	
-	public String getSchool_Cd() {
+	public String getSchool_cd() {
 		return school_cd;
 	}
 	public String getCd() {
@@ -17,7 +17,7 @@ public class Subject implements java.io.Serializable {
 		return name;
 	}
 
-	public void setSchool_Cd(String school_cd) {
+	public void setSchool_cd(String school_cd) {
 		this.school_cd=school_cd;
 	}
 	public void setCd(String cd) {
