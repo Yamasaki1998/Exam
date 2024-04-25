@@ -6,7 +6,7 @@
 
 <p>成績を追加する学生の情報を入力してください。</p>
 <form action="insert" method="post">
-学生番号<input type="text" name="no"><br>
+学生番号<input type="text" name="student_no"><br>
 <br>
 科目コード<input type="text" name="subjct_cd"><br>
 <br>
