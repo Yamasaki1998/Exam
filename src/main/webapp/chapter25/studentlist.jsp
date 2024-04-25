@@ -11,14 +11,19 @@
 <hr style="height: 6px;">
 <!-- TODO: 受け取った学生の一覧情報を表示 -->
 <table border="1">
-<th>生徒ID</th>
-<th>生徒名</th>
-<th>コース名</th>
+<th>学生番号</th>
+<th>学生名</th>
+<th>入学年度</th>
+<th>クラスID</th>
+<th>在学判定</th>
+<th>学校コード</th>
 <c:forEach var="student" items="${list}">
 	<tr>
-	<td>${student.id}</td>
+	<td>${student.no}</td>
 	<td>${student.name}</td>
-	<td>${student.course}</td>
+	<td>${student.ent_year}</td>
+	<td>${student.isattend}</td>
+	<td>${student.school_cd}</td>
 	</tr>
 </c:forEach>
 </table>		
