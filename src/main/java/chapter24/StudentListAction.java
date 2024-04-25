@@ -1,50 +1,28 @@
 package chapter24;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.util.List;
 
-public class StudentListAction {
-    public static void main(String[] args) {
-        // H2データベースへの接続URL
-        String jdbcURL = "jdbc:h2:~/Seiseki"; // データベースのパスを適宜変更してください
-        String user = "sa"; // ユーザー名
-        String password = ""; // パスワード
+import bean.Student;
+import dao.StudentDAO;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import tool.Action;
 
-        try {
-            // H2 JDBCドライバをロード
-            Class.forName("org.h2.Driver");
+public class StudentListAction extends Action {
+	public String execute(
+		HttpServletRequest request, HttpServletResponse response
+	) throws Exception {
 
-            // コネクションを確立
-            Connection connection = DriverManager.getConnection(jdbcURL, user, password);
+		HttpSession session=request.getSession(); // セッションの開始
 
-            // ステートメントを作成
-            Statement statement = connection.createStatement();
+		StudentDAO dao=new StudentDAO();
+		List<Student> list=dao.search(""); // 学生一覧を取得 
 
-            // SQLクエリを実行し、結果を取得
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM Student");
+		session.setAttribute("list", list); // 学生一覧をlistという名前で保存
 
-            // 結果を1行ずつ処理
-            while (resultSet.next()) {
-                String no = resultSet.getString("no");
-                String name = resultSet.getString("name");
-                String ent_year = resultSet.getString("ent_year");
-                String class_num = resultSet.getString("class_num");
-                Boolean isattend = resultSet.getBoolean("isattend");
-                String school_cd = resultSet.getString("shool_cd");
+		return "../chapter25/studentlist.jsp"; // studentlist.jspに遷移
 
-
-                // 学生情報を表示
-                System.out.println("No: " + no + ", Name: " + name + ", Ent_year: " + ent_year + ", Class_num: " + class_num + ", Isattend: " + isattend+ ", School_cd: " + school_cd);
-            }
-
-            // リソースを閉じる
-            resultSet.close();
-            statement.close();
-            connection.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+	}
 }
+
