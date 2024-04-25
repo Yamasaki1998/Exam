@@ -22,7 +22,8 @@
 	<td>${student.no}</td>
 	<td>${student.name}</td>
 	<td>${student.ent_year}</td>
-	<td>${student.isattend}</td>
+	<td>${student.class_num}</td>
+	<td>${student.is_attend}</td>
 	<td>${student.school_cd}</td>
 	</tr>
 </c:forEach>
