@@ -29,7 +29,7 @@ public class StudentDAO extends DAO { // DAOクラスを継承(DAOクラスの�
 			s.setName(rs.getString("name"));
 			s.setEnt_year(rs.getString("ent_year"));
 			s.setClass_num(rs.getString("class_num"));
-			s.setIsattend(rs.getBoolean("isattend"));
+			s.setIsattend(rs.getBoolean("is_attend"));
 			s.setSchool_cd(rs.getString("school_cd"));
 			list.add(s); // データを一件取得するごとにlistに追記する
 			
@@ -50,7 +50,7 @@ public class StudentDAO extends DAO { // DAOクラスを継承(DAOクラスの�
 		st.setString(2, student.getName());
 		st.setString(3, student.getEnt_year());
 		st.setString(4, student.getClass_num());
-		st.setBoolean(5, student.getIsattend());
+		st.setBoolean(5, student.getIs_attend());
 		st.setString(6,student.getSchool_cd());
 		int line=st.executeUpdate();
 
