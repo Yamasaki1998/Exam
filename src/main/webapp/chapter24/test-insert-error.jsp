@@ -9,6 +9,6 @@
 <br>２、その他
 
 <br><br><a href="../chapter25/menu.jsp">メニューに戻る</a>
-<a href="../chapter23/seiseki_insert.jsp">成績登録画面に戻る</a>
+<a href="../chapter23/test_insert.jsp">成績登録画面に戻る</a>
 
 <%@include file="../footer.html" %>
