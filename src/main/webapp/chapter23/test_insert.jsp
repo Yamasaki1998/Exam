@@ -1,14 +1,33 @@
-<%@page pageEncoding="UTF-8" %>
+<%@page contentType="text/html; charset=UTF-8" %>
+<%@include file="../header.html" %>
+
+<!-- menu.jspを読み込む -->
 <%@include file="../chapter25/menu.jsp" %>
 
-<br><br>
+<p>成績を追加する学生の情報を入力してください。</p>
+<form action="insert" method="post">
+学生番号<input type="text" name="student_no"><br>
+<br>
+科目コード<input type="text" name="subjct_cd"><br>
+<br>
+学校コード<select name="school_cd" required>
+<option value="oom">大宮(oom)</option>
+<option value="tky">東京(tky)</option></select><br>
+<br>
+NO<select name="no" required>
+<option value="1">1</option>
+<option value="2">2</option></select><br>
+<br>
+得点<input type="text" name="point"><br>
+<br>
+クラス<input type="text" name="class_num"><br>
+</select><br>
 
-<a href="../chapter23/seiseki_insert.jsp">成績登録</a>
-<a href="../chapter23/seiseki_hennkou.jsp">成績変更</a>
-<a href="../chapter23/seiseki_delete.jsp">成績削除</a>
-<a href="../chapter23/seiseki_sannsyou.jsp">成績参照(科目、クラス毎)</a>
-<a href="../chapter23/seiseki_sannsyou_gakusei.jsp">成績参照(学生毎)</a>
+<input type="submit" value="追加">
+</form>
 
-<br><br><a href="../chapter25/menu.jsp">メニューに戻る</a>
+<hr style="border-collapse:separate;border-spacing:10px;">
+
+<br><a href="../chapter25/menu.jsp">メニューに戻る</a>
 
 <%@include file="../footer.html" %>
