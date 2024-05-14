@@ -1,3 +1,4 @@
+
 <%@page contentType="text/html; charset=UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -29,7 +30,7 @@
 			<td>${student.name}</td>
 			<td>${student.ent_year}</td>
 			<td>${student.class_num}</td>
-			<td>${student.isattend}</td>
+			<td>${student.is_attend}</td>
 			<td>${student.school_cd}</td>
 		</tr>
 	</c:forEach>
