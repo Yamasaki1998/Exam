@@ -23,11 +23,11 @@ public class SubjectDAO extends DAO { // DAOクラスを継承(DAOクラスの�
 
 		// データを順に取得
 		while (rs.next()) {
-			Subject p=new Subject();
-			p.setSchool_cd(rs.getString("school_cd"));
-			p.setCd(rs.getString("cd"));
-			p.setName(rs.getString("name"));
-			list.add(p); // データを一件取得するごとにlistに追記する
+			Subject s=new Subject();
+			s.setSchool_cd(rs.getString("school_cd"));
+			s.setCd(rs.getString("cd"));
+			s.setName(rs.getString("name"));
+			list.add(s); // データを一件取得するごとにlistに追記する
 			
 			
 		}
@@ -51,5 +51,21 @@ public class SubjectDAO extends DAO { // DAOクラスを継承(DAOクラスの�
 		st.close();
 		con.close();
 		return line;
+	}
+	public void delete(String Cd) throws Exception {
+	    Connection con = getConnection();
+
+	    try {
+	        // DELETE 文を準備
+	        PreparedStatement st = con.prepareStatement(
+	            "DELETE FROM subject WHERE CD = ?");
+	        st.setString(1, Cd);
+
+	        // DELETE 文を実行
+	        st.executeUpdate();
+	    } finally {
+	        // リソースを適切にクローズ（例外が発生しても）
+	        con.close();
+	    }
 	}
 }
