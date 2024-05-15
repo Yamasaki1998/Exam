@@ -3,7 +3,9 @@
 <%@include file="../header.html" %>
 <%@include file="/chapter25/menu.jsp" %>
 
-<br><br>ログアウトしました。
+<div class="botton_center">
+<br><br><h3>ログアウトしました。</h3>
+</div>
 
 <br><br><a href="../chapter25/menu.jsp">メニューに戻る</a>
 
