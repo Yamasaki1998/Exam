@@ -1,0 +1,174 @@
+.test {
+  /* ここにスタイルを追加 */
+  color:aqua
+  
+}
+
+.add-botton{
+	background-color:#c5c56a;
+}
+
+
+
+.title{
+	font-size:40px;
+	font-weight: bold;/*太字*/
+	text-decoration: underline;/*河川*/
+	display: flex;
+	justify-content: center; /* 横方向の中央寄せ */
+}
+
+.Botton{
+	display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007BFF;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.Botton:hover {
+  background-color: #0056b3;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: center; /* 横方向の中央寄せ */
+	gap: 5px; /* ボタン同士の間隔を調整 */
+}
+
+.Botton2{
+	display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #c39143;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  }
+
+.Botton2:hover {
+  background-color: rgb(128, 64, 0);
+}
+
+.botton_center{
+	text-align: center;
+}
+
+.login_bot{
+	display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: rgb(0, 128, 192);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  }
+
+.login_bot:hover {
+  background-color: skyblue;
+}
+
+.logout_bot{
+	display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: red;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  }
+
+.logout_bot:hover {
+  background-color: rgb(255, 128, 128);
+}
+
+.back_to_menu{
+	text-align: right;
+}
+
+
+.center-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 以下、科目追加用CSS */
+
+.k_schoolName{
+	margin-right:130px;
+}
+
+.k_code{
+	margin-right:90px;
+}
+
+.k_name{
+	margin-right:130px;
+}
+
+/* 科目追加用CSS終わり */
+
+
+/* 以下、生徒追加用CSS */
+
+.stu-num{
+	margin-right:110px;
+}
+
+.stu-name{
+	margin-right:140px;
+}
+
+.stu-year{
+	margin-right:110px;
+}
+
+.stu-clsCd{
+	margin-right:75px;
+}
+
+.stu-clsCdBox{
+	margin-right:30px;
+}
+
+.stu-zaiseki{
+	margin-right:105px;
+}
+
+.stu-zaisekiBox{
+	margin-right:55px;
+}
+
+.stu-schoolCd{
+	margin-right:90px;
+}
+
+.stu-schoolCdBox{
+	margin-right:45px;
+}
+
+/* 生徒追加用CSS終わり */
+
+/* 以下ログイン画面用CSS */
+
+.login-id{
+	margin-right:85px;
+}
+
+.login-password{
+	margin-right:90px;
+}
+
+/* ログイン画面用CSS終わり */
+
+/* 以下学生変更画面用CSS */
+
+.henkou-name{
+	margin-right:50px;
+}
+
+.henkou-course{
+	margin-right:140px;
+}
