@@ -58,4 +58,21 @@ public class StudentDAO extends DAO { // DAOクラスを継承(DAOクラスの�
 		con.close();
 		return line;
 	}
+	
+	public void delete(String No) throws Exception {
+	    Connection con = getConnection();
+
+	    try {
+	        // DELETE 文を準備
+	        PreparedStatement st = con.prepareStatement(
+	            "DELETE FROM student WHERE NO = ?");
+	        st.setString(1, No);
+
+	        // DELETE 文を実行
+	        st.executeUpdate();
+	    } finally {
+	        // リソースを適切にクローズ（例外が発生しても）
+	        con.close();
+	    }
+	}
 }
