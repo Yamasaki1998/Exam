@@ -11,7 +11,7 @@
 
 <hr style="height: 6px;">
 <!-- TODO: 受け取った学生の一覧情報を表示 -->
-<table border="1">
+<table border="1" class="center-table">
 <th>学生番号</th>
 <th>学生名</th>
 <th>入学年度</th>
