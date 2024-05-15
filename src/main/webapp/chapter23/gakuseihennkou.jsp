@@ -48,6 +48,7 @@
 
 		out.println("</select><br>");
 		out.println("</div>");
+		out.println("<input type=\"submit\" value=\"更新\" class=\"button\">");
 		out.println("</form>");
 		
 		
