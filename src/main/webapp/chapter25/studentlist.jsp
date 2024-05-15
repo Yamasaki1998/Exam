@@ -1,4 +1,5 @@
 <%@page contentType="text/html; charset=UTF-8" %>
+<link rel="stylesheet" type="text/css" href="../chapter23/styles2.css">
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="../header.html" %>
 <%@include file="menu.jsp" %>

@@ -20,7 +20,7 @@ public class SearchAction extends Action {
 
 		request.setAttribute("list", list);
 
-		return "list.jsp";
+		return "../chapter25/studentlist.jsp";
 	}
 }
 
