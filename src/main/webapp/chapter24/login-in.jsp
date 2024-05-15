@@ -4,12 +4,20 @@
 <%@include file="/chapter25/menu.jsp" %>
 
 <br>
-<p>  </p>
+<br>
+<div class="botton_center">
 <form action="Login.action" method="post">
-<input name="id" type="text" value="" placeholder="idを入力" required/>
-<input name="password" type="text" value="" placeholder="passwordを入力" required/>
-<input type="submit" value="ログインする" />
+<div  class="login-id">ログインID</div>
+<input name="id" type="text" value="" placeholder="idを入力" required />
+<br>
+<br>
+<div class="login-password">パスワード</div>
+<input name="password" type="text"  value="" placeholder="passwordを入力" required/>
+<br>
+<br>
+<input type="submit" value="ログインする" class="login_bot"/>
 </form>
+</div>
 
 <br><a href="../chapter25/menu.jsp">メニューに戻る</a>
   
