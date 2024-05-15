@@ -3,8 +3,13 @@
 <%@include file="../header.html" %>
 <%@include file="/chapter25/menu.jsp" %>
 
-<br><br>すでにログアウトしています。
+<br><br>
+<div class="botton_center">
+<h3>すでにログアウトしています。</h3>
+</div>
+
 
 <br><br><a href="../chapter25/menu.jsp">メニューに戻る</a>
+
 
 <%@include file="../footer.html" %>
