@@ -9,8 +9,6 @@
 </div>
 
 <br><br>
-<div class="back_to_menu">
 <a href="../chapter25/menu.jsp">メニューに戻る</a>
-</div>
 
 <%@include file="../footer.html" %>
