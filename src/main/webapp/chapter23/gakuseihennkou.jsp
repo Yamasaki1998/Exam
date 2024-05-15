@@ -29,6 +29,7 @@
 		out.println("<div class=\"mainform\">");
 		out.println("<form action=\"update\" method=\"post\">");
 		out.println("<select name=\"stname\">");
+		out.println("<option value=\"\">学生番号を選択</option>");
 		
 		while (rs.next()) {
 			out.println("<option value="+rs.getString("name")+">"+rs.getString("name")+"</option>");
