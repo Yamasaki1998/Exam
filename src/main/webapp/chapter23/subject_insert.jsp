@@ -27,10 +27,10 @@
 </div>
 <br>
 <div class="k_code">科目コード</div>
-<input type="text" name="cd"><br>
+<input type="text" name="cd" required><br>
 <br>
 <div class="k_name">科目名</div>
-<input type="text" name="name"><br>
+<input type="text" name="name" required><br>
 <br>
 <input type="submit" class="add-botton" value="追加">
 </form>
