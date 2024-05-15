@@ -34,13 +34,20 @@
 			out.println("<option value="+rs.getString("name")+">"+rs.getString("name")+"</option>");
 		}
 		out.println("</select><br><br>");
-		out.println("<div class=\"henkou-course\">コース名</div>");
-		out.println("<select name=\"course\">");
-		out.println("<option value=\"1\">システム開発</option>");
-		out.println("<option value=\"2\">AIシステム・データサイエンス</option>");
-		out.println("</select>");
-		out.println("</div><br>");
-		out.println("<input type=\"submit\" value=\"更新\" class=\"button\">");
+		out.println("<div class=\"henkou-name\">科目名</div>");
+		out.println("<div class=\"mainform\">");
+		out.println("<select name=\"cd\">");
+		out.println("<option value=\"\">科目コードを選択</option>");
+
+		PreparedStatement subjectSt = con.prepareStatement("SELECT * FROM SUBJECT ORDER BY CD ASC;");
+		ResultSet subjectRs = subjectSt.executeQuery();
+		while (subjectRs.next()) {
+		    String subjectCode = subjectRs.getString("CD");
+		    out.println("<option value=\"" + subjectCode + "\">" + subjectCode + "</option>");
+		}
+
+		out.println("</select><br>");
+		out.println("</div>");
 		out.println("</form>");
 		
 		
