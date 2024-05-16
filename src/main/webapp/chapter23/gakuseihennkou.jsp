@@ -65,4 +65,9 @@
 </div>
 
 
-<%@include file="../footer.html"%>
+<hr style="border-collapse:separate;border-spacing:10px;">
+<br><a href="../chapter25/menu.jsp">メニューに戻る</a>
+<br><a href="../chapter23/gakuseikannri.jsp">学生管理トップに戻る</a>
+<%@include file="../footer.html" %>
+</body>
+</html>
