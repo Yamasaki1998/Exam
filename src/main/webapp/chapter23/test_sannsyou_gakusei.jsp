@@ -7,16 +7,9 @@
 <p>成績を参照する情報を入力してください。</p>
 <form action="" method="post">
 <br>
-入学年度<input type="test" name="ent_year" required><br>
-<br>
-クラス<input type="text" name="class_num" required><br>
-<br>
-科目コード<input type="text" name="subject_cd" required><br>
+学生番号<input type="test" name="student_no" required><br>
 <br>
 
-回数<select name="no" required>
-<option value="1">1</option>
-<option value="2">2</option></select><br>
 </select>
 
 <input type="submit" value="検索">

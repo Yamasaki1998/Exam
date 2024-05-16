@@ -8,8 +8,6 @@
 <form action="TestInsert.action" method="post">
 学生番号<input type="text" name="student_no" required><br>
 <br>
-入学年度<input type="test" name="ent_year" required><br>
-<br>
 科目コード<input type="text" name="subject_cd" required><br>
 <br>
 学校コード<select name="school_cd" required>
