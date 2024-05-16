@@ -9,6 +9,7 @@
 
 
 <%@include file="../header.html"%>
+<form action="" method="post">
 
 <div class="main">
 <div class="botton_center">
@@ -27,9 +28,8 @@
 		out.println("<br><h3>更新する学生とその学生のコースを選択してください。</h3>");
 		out.println("<div class=\"henkou-name\">学生名</div>");
 		out.println("<div class=\"mainform\">");
-		out.println("<form action=\"update\" method=\"post\">");
-		out.println("<select name=\"stname\">");
-		out.println("<option value=\"\">学生番号を選択</option>");
+		out.println("<select name=\"stname\" required>");
+		out.println("<option value=\"\">学生名を選択</option>");
 		
 		while (rs.next()) {
 			out.println("<option value="+rs.getString("name")+">"+rs.getString("name")+"</option>");
@@ -37,7 +37,7 @@
 		out.println("</select><br><br>");
 		out.println("<div class=\"henkou-name\">科目名</div>");
 		out.println("<div class=\"mainform\">");
-		out.println("<select name=\"cd\">");
+		out.println("<select name=\"cd\" required>");
 		out.println("<option value=\"\">科目コードを選択</option>");
 
 		PreparedStatement subjectSt = con.prepareStatement("SELECT * FROM SUBJECT ORDER BY CD ASC;");
