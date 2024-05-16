@@ -28,6 +28,6 @@ public class SubjectInsertAction extends Action {
 		List<Subject> list=dao.search("");
 		request.setAttribute("list", list);
 
-		return "subjectlist.jsp";
+		return "subject_insert_ok.jsp";
 	}
 }
