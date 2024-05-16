@@ -21,6 +21,6 @@ public class SubjectDeleteAction extends Action {
         List<Subject> list = dao.search("");
         request.setAttribute("list", list);
 
-        return "subject_delete.jsp";
+        return "subject_delete_ok.jsp";
     }
 }
