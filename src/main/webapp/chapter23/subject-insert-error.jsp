@@ -1,15 +1,43 @@
 <%@page contentType="text/html; charset=UTF-8" %>
 <link rel="stylesheet" type="text/css" href="../chapter23/styles2.css">
 <%@include file="../header.html" %>
-<%@include file="/chapter25/menu.jsp" %>
 
-<br><br>科目の情報を正しく追加できませんでした。
+<!-- menu.jspを読み込む -->
+<%@include file="../chapter25/menu.jsp" %>
+<html>
+<head>
+<title>科目追加</title>
+</head>
 
-<br><br>追加に失敗した考えられる理由
-<br>１、科目コードの重複
-<br>２、その他
+<body>
+<div class="botton_center">
+<p>科目コードが重複しています。</p>
+<br>
+<div class="group">
+	<form action="SubjectInsert.action" method="post"> 
+		<div class="k_schoolName">
+			学校名
+		</div>
+	
+		<select name="school_cd" required>
+		<option value="">学校名を選択してください</option>
+		<option value="oom">大宮校</option>
+		<option value="tky">東京校</option></select><br>
+</div>
+<br>
+<div class="k_code">科目コード</div>
+<input type="text" name="cd" required><br>
+<br>
+<div class="k_name">科目名</div>
+<input type="text" name="name" required><br>
+<br>
+<input type="submit" class="add-botton" value="追加">
+</form>
+</div>
+<hr style="border-collapse:separate;border-spacing:10px;">
 
-<br><br><a href="../chapter25/menu.jsp">メニューに戻る</a>
-<a href="../chapter23/subject_insert.jsp">科目登録画面に戻る</a>
-
+<br><a href="../chapter25/menu.jsp">メニューに戻る</a>
+<br><a href="../chapter23/subjectkannri.jsp">科目管理トップに戻る</a>
 <%@include file="../footer.html" %>
+</body>
+</html>
