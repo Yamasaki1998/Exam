@@ -9,7 +9,7 @@
 
 
 <%@include file="../header.html"%>
-
+	<form action="" method="post"> 
 <div class="main">
 <%
 try { 
@@ -22,8 +22,7 @@ try {
     ResultSet rs = st.executeQuery();
 
     out.println("<div class=\"mainform\">");
-    out.println("科目コード<select name=\"cd\">");
-	out.println("<form action=\"SubjectUpDate.action\" method=\"post\">");
+    out.println("科目コード<select name=\"cd\" required>");
     out.println("<option value=\"\">科目コードを選択</option>");
 
     while (rs.next()) {
