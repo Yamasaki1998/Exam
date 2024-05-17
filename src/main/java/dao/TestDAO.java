@@ -40,6 +40,36 @@ public class TestDAO extends DAO { // DAOクラスを継承(DAOクラスのメ�
 
 		return list; // listの値を返却する
 	}
+	
+	public List<Test> studentsearch(String keyword) throws Exception { // searchメソッドを定義
+		List<Test> list=new ArrayList<>(); // Student型の配列を作成
+
+		Connection con=getConnection(); // DBに接続(DAOのgetConnectionメソッドを実行)
+
+		// select文を実行
+		PreparedStatement st=con.prepareStatement(
+			"select * from test where student_no like ?");
+		st.setString(1, "%"+keyword+"%");
+		ResultSet rs=st.executeQuery();
+
+		// データを順に取得
+		while (rs.next()) {
+			Test s=new Test();
+			s.setStudent_no(rs.getString("student_no"));
+			s.setSubject_cd(rs.getString("subject_cd"));
+			s.setSchool_cd(rs.getString("school_cd"));
+			s.setNo(rs.getString("no"));
+			s.setPoint(rs.getString("point"));
+			s.setClass_num(rs.getString("class_num"));
+			list.add(s); // データを一件取得するごとにlistに追記する
+			
+		}
+
+		st.close();
+		con.close(); // DB接続を閉じる
+
+		return list; // listの値を返却する
+	}
 
 	public int insert(Test test) throws Exception {
 		Connection con=getConnection();
