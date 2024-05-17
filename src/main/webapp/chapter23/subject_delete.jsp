@@ -24,10 +24,11 @@
 		"select * from SUBJECT ;"); 
 		ResultSet rs=st.executeQuery();
 		
-		out.println("<p>削除する科目の名前を選択してください。</p>");
+		out.println("<div class=\"botton_center\">");
+		out.println("<h3>削除する科目の名前を選択してください。</h3>");
 		out.println("<div class=\"mainform\">");
 		out.println("<form action=\"SubjectDelete.action\" method=\"post\">");
-		out.println("<select name=\"cd\" required>");
+		out.println("<select name=\"cd\">");
 		
 		while (rs.next()) {
 			out.println("<option value="+rs.getString("cd")+">"+rs.getString("name")+"</option>");
@@ -36,7 +37,7 @@
 		out.println("</div>");
 		out.println("<input type=\"submit\" value=\"削除\" class=\"button\">");
 		out.println("</form>");
-		
+		out.println("</div>");
 		st.close();
 		con.close();
 	
@@ -44,6 +45,10 @@
 		out.println(e);
 	}
 %>
+<br>
 </div>
+<hr style="border-collapse:separate;border-spacing:10px;">
 
+<br><a href="../chapter25/menu.jsp">メニューに戻る</a>
+<br><a href="../chapter23/subjectkannri.jsp">科目管理トップに戻る</a>
 <%@include file="../footer.html"%>
