@@ -23,8 +23,8 @@
 		PreparedStatement st=con.prepareStatement(
 		"select * from STUDENT INNER JOIN CLASS_NUM ON STUDENT.CLASS_NUM = CLASS_NUM.CLASS_NUM;"); 
 		ResultSet rs=st.executeQuery();
-		
-		out.println("<p>削除する学生の名前を選択してください。</p>");
+		out.println("<div class=\"botton_center\">");
+		out.println("<h3>削除する学生の名前を選択してください。</h3>");
 		out.println("<div class=\"mainform\">");
 		out.println("<form action=\"StudentDelete.action\" method=\"post\">");
 		out.println("<select name=\"no\">");
@@ -36,7 +36,7 @@
 		out.println("</div>");
 		out.println("<input type=\"submit\" value=\"削除\" class=\"button\">");
 		out.println("</form>");
-		
+		out.println("</div>");
 		st.close();
 		con.close();
 	
