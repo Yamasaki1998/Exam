@@ -5,7 +5,7 @@
 <!-- menu.jspを読み込む -->
 <%@include file="../chapter25/menu.jsp" %>
 <p>成績を参照する情報を入力してください。</p>
-<form action="" method="post">
+<form action="StudentSearch.action" method="post">
 <br>
 学生番号<input type="test" name="student_no" required><br>
 <br>
