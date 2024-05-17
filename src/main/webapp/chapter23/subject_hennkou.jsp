@@ -20,9 +20,11 @@ try {
     PreparedStatement st = con.prepareStatement(
     	"SELECT * FROM SUBJECT ORDER BY SUBJECT.CD ASC;"); 
     ResultSet rs = st.executeQuery();
-
+	
+    out.println("<div class=\"botton_center\">");
+    out.println("<h3>変更する科目の科目コードを選択してください</h3>");
     out.println("<div class=\"mainform\">");
-    out.println("科目コード<select name=\"cd\" required>");
+    out.println("科目コード<br><select name=\"cd\" required>");
     out.println("<option value=\"\">科目コードを選択</option>");
 
     while (rs.next()) {
@@ -30,10 +32,11 @@ try {
     }
     out.println("</select><br>");
 
-    out.println("</div>");
+    out.println("</div><br>");
 	out.println("<input type=\"submit\" value=\"選ぶ\" class=\"button\">");
-    out.println("</form>");
-
+    out.println("</form>");	
+    out.println("</div>");
+    
     st.close();
     con.close();
 } catch (Exception e) {
