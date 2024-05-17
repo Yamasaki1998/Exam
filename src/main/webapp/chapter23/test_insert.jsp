@@ -14,7 +14,7 @@
 <option value="oom">大宮(oom)</option>
 <option value="tky">東京(tky)</option></select><br>
 <br>
-回数<select name="no" required>
+NO<select name="no" required>
 <option value="1">1</option>
 <option value="2">2</option></select><br>
 <br>
