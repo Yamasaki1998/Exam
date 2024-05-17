@@ -5,7 +5,7 @@
 <!-- menu.jspを読み込む -->
 <%@include file="../chapter25/menu.jsp" %>
 <p>成績を参照する情報を入力してください。</p>
-<form action="" method="post">
+<form action="KamokuSearch.action" method="post">
 <br>
 入学年度<input type="test" name="ent_year" required><br>
 <br>
