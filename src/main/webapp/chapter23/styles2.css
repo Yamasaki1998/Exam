@@ -172,3 +172,58 @@
 .henkou-course{
 	margin-right:140px;
 }
+
+/*学生変更用CSS終わり */
+
+/*成績登録用CSS開始 */
+
+.result-stNo{
+	margin-right:100px;
+}
+
+.result-subCd{
+	margin-right:85px;
+}
+
+.result-scCd{
+	margin-right:85px;
+}
+
+.result-no{
+	margin-right:145px;
+}
+
+.result-nobox{
+	margin-right:140px;
+}
+
+.result-point{
+	margin-right:140px;
+}
+
+.result-class{
+	margin-right:125px;
+}
+/* 成績登録用CSS終わり */
+
+/* 以下成績変更用CSS */
+
+.ent-year{
+	margin-right:105px;
+}
+
+.class{
+	margin-right:120px;
+}
+
+.sub-cd{
+	margin-right:90px;
+}
+
+.kaisu{
+	margin-right:135px;
+}
+
+.kaisu-box{
+	margin-right:140px;
+}
