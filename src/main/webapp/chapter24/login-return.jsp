@@ -5,14 +5,21 @@
 
 
 <br>
+<div class="botton_center">
 <br>IDまたはパスワードが確認できませんでした<br>
 <p>  </p>
 <form action="Login.action" method="post">
+<div  class="login-id">ログインID</div>
 <input name="id" type="text" value="${param.id}" placeholder="idを入力" required/>
+<br>
+<br>
+<div class="login-password">パスワード</div>
 <input name="password" type="text" value="${param.password}" placeholder="passwordを入力" required/>
-<input type="submit" value="ログインする" />
+<br>
+<br>
+<input type="submit" value="ログインする" class="login_bot"/>
 </form>
-
+</div>
 <br><a href="../chapter25/menu.jsp">メニューに戻る</a>
   
 <%@include file="../footer.html" %>
