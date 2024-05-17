@@ -120,4 +120,23 @@ public class TestDAO extends DAO { // DAOクラスを継承(DAOクラスのメ�
 		con.close();
 		return line;
 	}
+	
+	public void delete(String Student_no ,String Subject_cd, String no) throws Exception {
+	    Connection con = getConnection();
+
+	    try {
+	        // DELETE 文を準備
+	        PreparedStatement st = con.prepareStatement(
+	            "DELETE FROM test WHERE STUDENT_NO = ? AND SUBJECT_CD = ? AND NO = ?");
+	        st.setString(1, Student_no);
+	        st.setString(2, Subject_cd);
+	        st.setString(3, no);
+
+	        // DELETE 文を実行
+	        st.executeUpdate();
+	    } finally {
+	        // リソースを適切にクローズ（例外が発生しても）
+	        con.close();
+	    }
+	}
 }
